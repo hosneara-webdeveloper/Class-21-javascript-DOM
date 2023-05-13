@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+
+        <ul id="nav-item">
+            <h1>Create a nav item link</h1>
+
+        </ul>
+
+        <div class=" segment">
+            <h3>Newblog-Article-1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quasi dignissimos porro praesentium at ullam, odio quam ad quis nesciunt!</p>
+        </div>
+        <div class=" segment">
+            <h3 id="second-title">Newblog-Article-2</h3>
+            <p>Molestias excepturi, minima fugit, hic quasi ipsa beatae neque similique quidem cumque unde tenetur animi suscipit. Reprehenderit voluptatem possimus necessitatibus.</p>
+        </div>
+        <div  class=" segment">
+
+        
+            <h3>Newblog-Article-3</h3>
+            <p>Consequatur, maxime? Amet modi enim non sit commodi quis quod, accusamus aperiam impedit alias porro accusantium facilis voluptatem aliquid eum.</p>
+        </div>
+        <div class=" segment">
+            <h3 id="last-blog">Newblog-Article-4</h3>
+            <p>Repudiandae incidunt fugiat magni aliquid ipsa id, temporibus quibusdam rem itaque ipsam, illum ad autem? Aliquam perspiciatis mollitia ipsum excepturi!</p>
+        </div>
+        
+
+
+
+
+     
+    </section>
+
+    <script>
+        // javascript DOM = Document Object Model.It is similar javaScript Object but not full. There a little bit different. 
+
+        const blogTitle = document.getElementsByTagName('h3');
+        for(const h3 of blogTitle) {
+            console.log(h3.innerText);
+        }
+        const blogDetails = document.getElementsByTagName('p');
+        for (const p of blogDetails) {
+             console.log('p.innerText');
+            
+        }
+
+     const blog = document.getElementById('second-title').style.color = 'red';
+     const secondTitle = document.getElementById('second-title');
+     secondTitle.innerText = 'This article will be change by using this method'
+     secondTitle.style.color = 'green'
+        secondTitle.style.backgroundColor = 'aqua'
+        secondTitle.style.borderRadius = '50px'
+        secondTitle.style.padding = '10px'
+        secondTitle.style.fontSize = '30px'
+        secondTitle.style.margin = '20px'
+        secondTitle.style.border = '2px dotted blue'
+
+        // 
+
+
+        const segments = document.getElementsByClassName('segment');
+        // console.log(segments)
+         for(const segment of segments ){
+            segment.style.border = '2px solid black';
+            segment.style.borderRadius = '20px';
+            segment.style.margin = '20px';
+            segment.style.padding = '20px';
+        } 
+        document.querySelector('#last-blog p');
+        //
+
+      const list =  document.createElement('li');
+      list.innerText = 'we are learning DOM from class number 21.';
+      console.log(list);
+      
+      /*  const ul = document.getElementById('nav-item');
+      ul.appendChild(li);
+   */
+
+   
+            //   Create a blog
+
+            const segment1 = document.createElement('segment');
+    const h3 = document.createElement('h3');
+    h3.innerText = 'This is the rules for creating a blog';
+    const p = document.createElement('p');
+    p.innerText = 'This is a short paragraph for making  a blog';
+    segment1.appendChild(h3);
+    segment1.appendChild(p);
+    console.log(segment1);
+
+     const myBlogSection = document.getElementById('BlogId');
+    myBlogSection.appendChild(segment)
+
+    
+
+
+
+
+        
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
